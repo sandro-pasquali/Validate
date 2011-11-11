@@ -1,0 +1,305 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>formal</title>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="ROBOTS" content="ALL" />
+<meta name="Copyright" content="Copyright (c) Jeebus" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+
+<style type="text/css">
+
+BODY
+  {
+    color: black;
+	font-family: Verdana, Arial;
+	font-size: 11px;
+	background-color: gainsboro;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+  }
+  
+.check
+  {
+    position: static;
+    font: 11px verdana, arial, sans-serif;
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 11px;
+	font-weight: bold;
+	color: crimson;
+	padding: 2px;
+  }	
+  
+.additionalInfo
+  {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+    font-size: 10px;
+	font-weight: bold;
+	color: crimson;
+	padding-left: 4px;
+	cursor: hand;
+	cursor: pointer;
+  }  
+  
+</style>
+
+<script language="Javascript" type="text/javascript" src="Validator.js"></script>
+
+</head>
+<body>
+
+<form class="formContainer" id="daform" method="post" action="about:blank">
+
+<div id="custname" class="formElement">
+  	<label>
+    	Your Name:
+	  	<span class="formElementInput">
+    		<input 	type="text" 
+	    	   		size="20" 
+		   			maxlength="30" 
+		   			name="custname" 
+		   			value="" />
+  		</span>
+	</label>
+</div>
+	
+<div id="agever" class="formElement">
+	<label>
+    	Are you 18 or older (21 in AL, MS, NE, WY)?
+	  	<span class="formElementInput">
+    		<select name="agever">
+	  			<option value="">Please Choose:</option>
+	  			<option value="YES">YES</option>
+	  			<option value="NO">NO</option>
+			</select>
+  		</span>
+	</label>
+</div>
+
+<div id="custphone" class="formElement">
+	<label>
+		Phone Number:
+	  	<span class="formElementInput">
+    		<input	type="text" 
+					size="20" 
+					maxlength="16" 
+					name="custphone" 
+					value="" />
+  		</span>
+	</label>
+</div>
+							
+<div id="custemail" class="formElement">
+  	<label>
+    	Your E-mail Address:
+	  	<span class="formElementInput">
+    		<input 	type="text" 
+	    	   		size="20" 
+		   			maxlength="50" 
+		   			name="custemail" 
+		   			value="" 
+		   			errorString="invalid email" 
+		   			regex="validEmail" 
+		   			additionalInfo="blah" />
+  		</span>
+	</label>
+</div>
+								
+<div id="chk_aba" class="formElement">
+  	<label>
+    	ABA/Routing Number:
+	  	<span class="formElementInput">
+    		<input 	type="text" 
+					name="chk_aba" 
+					maxlength="9" 
+					size="9" 
+					value="" 
+					errorString="must be 9 digits" 
+					regex="((%%.length==9) , (/^\d+$/.exec(%%)))" />
+  		</span>
+	</label>
+</div>
+								
+<div id="chk_acct" class="formElement">
+  	<label>
+    	Account Number:
+  		<span class="formElementInput">
+ 			<input 	type="text" 
+					name="chk_acct" 
+					maxlength="18" 
+					size="18" value="" 
+					errorString="invalid number" />
+  		</span>
+	</label>
+</div>
+								
+<div id="chk_number" class="formElement">
+  	<label>
+    	Check Number:
+	  	<span class="formElementInput">
+    		<input 	type="text" 
+					name="chk_number" 
+					maxlength="10" 
+					size="10" 
+					value="" 
+					errorString="invalid number" />
+  		</span>
+	</label>
+</div>
+								
+<div id="cust_address1" class="formElement">
+  	<label>
+    	Address 1:
+	  	<span class="formElementInput">
+			<input 	type="text" 
+					size="30" 
+					maxlength="40" 
+					name="custaddress1" 
+					value="" />
+  		</span>
+	</label>
+</div>
+								
+<div id="cust_address2" class="formElement">
+  	<label>
+    	Address 2:
+	  	<span class="formElementInput">
+			<input 	type="text" 
+					size="30" 
+					maxlength="40" 
+					name="custaddress2" 
+					validate="false" 
+					value="" />
+  		</span>
+	</label>
+</div>
+
+<div id="custcity" class="formElement">
+  	<label>
+    	City:
+  		<span class="formElementInput">
+			<input 	type="text" 
+					size="14" 
+					maxlength="20" 
+					name="custcity" 
+					value="" 
+					errorString="invalid city name" />
+  		</span>
+	</label>
+</div>
+								
+<div id="state" class="formElement">
+  	<label>
+    	State:
+  		<span class="formElementInput">
+			<select name="state">
+				<option value="">choose</option>
+				<option value="AL">AL</option>
+				<option value="AR">AR</option>
+				<option value="AZ">AZ</option>
+				<option value="CA">CA</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DC">DC</option>
+				<option value="DE">DE</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="IA">IA</option>
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="MA">MA</option>
+				<option value="MD">MD</option>
+				<option value="ME">ME</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MO">MO</option>
+				<option value="MS">MS</option>
+				<option value="MT">MT</option>
+				<option value="NB">NB</option>
+				<option value="NC">NC</option>
+				<option value="NE">NE</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>
+				<option value="NV">NV</option>
+				<option value="NY">NY</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VA">VA</option>
+				<option value="VT">VT</option>
+				<option value="WA">WA</option>
+				<option value="WI">WI</option>
+				<option value="WV">WV</option>
+				<option value="WY">WY</option>
+			</select>
+  		</span>
+	</label>
+</div>
+
+<div id="zip" class="formElement">
+  	<label>
+    	Zip:
+	  	<span class="formElementInput">
+ 			<input 	type="text" 
+					size="5" 
+					maxlength="6" 
+					name="zip" 
+					value="" />
+			<a class="check" id="checkzip">
+			</a>
+			<input 	type="text" 
+					size="4" 
+					maxlength="5" 
+					name="zip2" 
+					value="" 
+					validate="false" />
+  		</span>
+	</label>
+</div>
+
+<div>							
+We respect your privacy. For more information read our <a href="#">Privacy Policy</a>
+</div>
+
+<div id="required" class="formElement">
+    <label>
+  		<span class="formElementInput">
+			<input 	type="checkbox" 
+					name="required" 
+					validate="true" />
+  		</span>
+	I have read and agree to the <a href="#">Terms and Conditions</a> of use
+  	</label>
+</div>
+					
+<div id="submitButton" class="formSubmitButton">
+	<input 	type="button" 
+			onclick="return Validator.attemptSubmit(this);" 
+			value="Join Now! - Click only Once" />
+</div>
+
+</form>
+
+</body>
+</html>
